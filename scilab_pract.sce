@@ -1,64 +1,66 @@
 Window = figure("figure_name", "GraphApp", "BackgroundColor", [1, 1, 1])
-set(Window, "Position", [350, 50, 600, 500])
+set(Window, "Position", [300, 50, 900, 1000])
 
-eqappLabel = uicontrol("Style", "text", "Position", [20, 455, 100, 35], "String", "Вид уравнения: ", "BackgroundColor", [1, 1, 1]) 
-eqLabel = uicontrol("Style", "text", "Position", [105, 455, 270, 35], "String", "$\frac{d^2\varphi}{dx^2} + \alpha\frac{d\varphi}{dx} + \beta\varphi = 0$", "BackgroundColor", [1, 1, 1])
+eqappLabel = uicontrol("Style", "text", "Position", [20, 580, 100, 35], "String", "The equation: ", "BackgroundColor", [1, 1, 1]) 
+eqLabel = uicontrol("Style", "text", "Position", [130, 570, 270, 55], "String", "$\frac{d^2\varphi}{dx^2} + \alpha\frac{d\varphi}{dx} + \beta\varphi = 0$", "BackgroundColor", [1, 1, 1])
 
-alphaLabel = uicontrol("Style", "text", "Position", [20, 420, 70, 25], "String", "$\alpha = $", "BackgroundColor", [1, 1, 1])
-alphaEdit = uicontrol("Style", "edit", "Position", [47, 420, 70, 25], "String", "-6")
+alphaLabel = uicontrol("Style", "text", "Position", [20, 540, 70, 25], "String", "$\alpha = $", "BackgroundColor", [1, 1, 1])
+alphaEdit = uicontrol("Style", "edit", "Position", [60, 540, 70, 25], "String", "-6")
 
-betaLabel = uicontrol("Style", "text", "Position", [145, 420, 70, 25], "String", "$\beta = $", "BackgroundColor", [1, 1, 1])
-betaEdit = uicontrol("Style", "edit", "Position", [174, 420, 70, 25], "String", "9")
+betaLabel = uicontrol("Style", "text", "Position", [145, 540, 70, 25], "String", "$\beta = $", "BackgroundColor", [1, 1, 1])
+betaEdit = uicontrol("Style", "edit", "Position", [185, 540, 70, 25], "String", "9")
 
-MLabel = uicontrol("Style", "text", "Position", [272, 420, 70, 25], "String", "$M = $", "BackgroundColor", [1, 1, 1])
-MEdit = uicontrol("Style", "edit", "Position", [305, 420, 70, 25], "String", "3")
+MLabel = uicontrol("Style", "text", "Position", [272, 540, 70, 25], "String", "$M = $", "BackgroundColor", [1, 1, 1])
+MEdit = uicontrol("Style", "edit", "Position", [320, 540, 70, 25], "String", "3")
 
-DirichletLabel = uicontrol("Style", "text", "Position", [20, 390, 104, 25], "String", "Задача Дирихле: ", "BackgroundColor", [1, 1, 1])
-DirichletAppLabel = uicontrol("Style", "text", "Position", [109, 390, 195, 25], "String", "$\varphi(0) = 0,\ \varphi(1) = 1$", "BackgroundColor", [1, 1, 1], "fontsize", 12)
-DirichletRadioButton = uicontrol("Style", "radiobutton", "Position", [292, 390, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 1, "Callback", "DirichletRadioButtonCallback")
+DirichletLabel = uicontrol("Style", "text", "Position", [20, 510, 154, 25], "String", "Dirichlet problem: ", "BackgroundColor", [1, 1, 1])
+DirichletAppLabel = uicontrol("Style", "text", "Position", [20, 490, 210, 25], "String", "$\varphi(0) = 0,\ \varphi(1) = 1$", "BackgroundColor", [1, 1, 1], "fontsize", 15)
+DirichletRadioButton = uicontrol("Style", "radiobutton", "Position", [250, 500, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 1, "Callback", "DirichletRadioButtonCallback")
 
-NeumannLabel = uicontrol("Style", "text", "Position", [20, 370, 104, 25], "String", "Задача Неймана: ", "BackgroundColor", [1, 1, 1])
-NeumannAppLabel = uicontrol("Style", "text", "Position", [109, 370, 205, 25], "String", "$\varphi(0) = 0,\ (d\varphi/dx)_{x = 1} = 1$", "BackgroundColor", [1, 1, 1], "fontsize", 12)
-NeumannRadioButton = uicontrol("Style", "radiobutton", "Position", [292, 370, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "NeumannRadioButtonCallback")
+NeumannLabel1 = uicontrol("Style", "text", "Position", [20, 460, 275, 25], "String", "Neumann problem: ", "BackgroundColor", [1, 1, 1])
+NeumannAppLabel2 = uicontrol("Style", "text", "Position", [20, 440, 275, 25], "String", "$\varphi(0) = 0,\ (d\varphi/dx)_{x = 1} = 1$", "BackgroundColor", [1, 1, 1], "fontsize", 15)
+NeumannRadioButton = uicontrol("Style", "radiobutton", "Position", [250, 450, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "NeumannRadioButtonCallback")
 
-DirichletDiffLabel = uicontrol("Style", "text", "Position", [326, 390, 236, 25], "String", "Разность Задачи Дирихле и точного решения", "BackgroundColor", [1, 1, 1]);
-DirichletDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [560, 390, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "DDRadioButtonCallback")
+DirichletDiffLabel = uicontrol("Style", "text", "Position", [300, 510, 280, 25], "String", "Error for the solution for", "BackgroundColor", [1, 1, 1]);
+DirichletDiffLabel = uicontrol("Style", "text", "Position", [300, 490, 280, 25], "String", "Dirichlet problem", "BackgroundColor", [1, 1, 1]);
+DirichletDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [500, 500, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "DDRadioButtonCallback")
 
-NeumannDiffLabel = uicontrol("Style", "text", "Position", [326, 370, 236, 25], "String", "Разность Задачи Неймана и точного решения", "BackgroundColor", [1, 1, 1]);
-NeumannDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [560, 370, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0,  "Callback", "NDRadioButtonCallback")
+NeumannDiffLabel1 = uicontrol("Style", "text", "Position", [300, 460, 275, 25], "String", "Error for the solution for", "BackgroundColor", [1, 1, 1]);
+NeumannDiffLabel2 = uicontrol("Style", "text", "Position", [300, 440, 275, 25], "String", "Neumann problem ", "BackgroundColor", [1, 1, 1]);
+NeumannDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [500, 450, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0,  "Callback", "NDRadioButtonCallback")
 
-realSolve = uicontrol("Style", "text", "Position", [20, 345, 175, 25], "String", "Точное решение", "BackgroundColor", [1, 1, 1])
-realSolveCheckBox = uicontrol("Style", "checkbox", "Position", [110, 350, 20, 19], "BackgroundColor", [0, 0, 0], "Value", 1)
+realSolve = uicontrol("Style", "text", "Position", [20, 400, 175, 25], "String", "The exact solution", "BackgroundColor", [1, 1, 1])
+realSolveCheckBox = uicontrol("Style", "checkbox", "Position", [155, 403, 20, 19], "BackgroundColor", [0, 0, 0], "Value", 1)
 
-method1Label = uicontrol("Style", "text", "Position", [20, 325, 175, 25], "String", "1) Метод поточечной коллокации", "BackgroundColor", [1, 1, 1])
-method1CheckBox = uicontrol("Style", "checkbox", "Position", [218, 330, 20, 19], "BackgroundColor", [1, 0, 0], "Value", 1)
+method1Label = uicontrol("Style", "text", "Position", [20, 370, 195, 25], "String", "1) The pointwise collocation method", "BackgroundColor", [1, 1, 1])
+method1CheckBox = uicontrol("Style", "checkbox", "Position", [275, 373, 20, 19], "BackgroundColor", [1, 0, 0], "Value", 1)
 
-method2Label = uicontrol("Style", "text", "Position", [20, 305, 195, 25], "String", "2) Метод коллокации по подобластям", "BackgroundColor", [1, 1, 1])
-method2CheckBox = uicontrol("Style", "checkbox", "Position", [218, 310, 20, 19], "BackgroundColor", [0, 1, 0], "Value", 1)
+method2Label = uicontrol("Style", "text", "Position", [20, 340, 255, 25], "String", "2) The collocation method by region", "BackgroundColor", [1, 1, 1])
+method2CheckBox = uicontrol("Style", "checkbox", "Position", [275, 343, 20, 19], "BackgroundColor", [0, 1, 0], "Value", 1)
 
-method3Label = uicontrol("Style", "text", "Position", [20, 285, 175, 25], "String", "3) Метод Галеркина", "BackgroundColor", [1, 1, 1])
-method3CheckBox = uicontrol("Style", "checkbox", "Position", [218, 290, 20, 19], "BackgroundColor", [0, 0, 1], "Value", 1)
+method3Label = uicontrol("Style", "text", "Position", [20, 310, 175, 25], "String", "3) The Galerkin Method", "BackgroundColor", [1, 1, 1])
+method3CheckBox = uicontrol("Style", "checkbox", "Position", [275, 313, 20, 19], "BackgroundColor", [0, 0, 1], "Value", 1)
 
-method4Label = uicontrol("Style", "text", "Position", [300, 325, 195, 25], "String", "4) Метод 1 без ", "BackgroundColor", [1, 1, 1])
-method4psiLabel = uicontrol("Style", "text", "Position", [380, 325, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1])
-method4CheckBox = uicontrol("Style", "checkbox", "Position", [400, 330, 20, 19], "BackgroundColor", [1, 0, 1], "Value", 0)
+method4Label = uicontrol("Style", "text", "Position", [310, 370, 220, 25], "String", "4) The method 1 without", "BackgroundColor", [1, 1, 1])
+method4psiLabel = uicontrol("Style", "text", "Position", [485, 373, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1], "fontsize", 17)
+method4CheckBox = uicontrol("Style", "checkbox", "Position", [510, 373, 20, 19], "BackgroundColor", [1, 0, 1], "Value", 0)
 
-method5Label = uicontrol("Style", "text", "Position", [300, 305, 195, 25], "String", "5) Метод 2 без ", "BackgroundColor", [1, 1, 1])
-method5psiLabel = uicontrol("Style", "text", "Position", [380, 305, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1])
-method5CheckBox = uicontrol("Style", "checkbox", "Position", [400, 310, 20, 19], "BackgroundColor", [1, 0.7, 0], "Value", 0)
+method5Label = uicontrol("Style", "text", "Position", [310, 340, 220, 25], "String", "5) The method 2 without ", "BackgroundColor", [1, 1, 1])
+method5psiLabel = uicontrol("Style", "text", "Position", [485, 343, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1], "fontsize", 17)
+method5CheckBox = uicontrol("Style", "checkbox", "Position", [510, 343, 20, 19], "BackgroundColor", [1, 0.7, 0], "Value", 0)
 
-method6Label = uicontrol("Style", "text", "Position", [300, 285, 195, 25], "String", "6) Метод 3 без ", "BackgroundColor", [1, 1, 1])
-method6psiLabel = uicontrol("Style", "text", "Position", [380, 285, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1])
-method6CheckBox = uicontrol("Style", "checkbox", "Position", [400, 290, 20, 19], "BackgroundColor", [0, 0.7, 1], "Value", 0)
+method6Label = uicontrol("Style", "text", "Position", [310, 310, 220, 25], "String", "6) The method 3 without ", "BackgroundColor", [1, 1, 1])
+method6psiLabel = uicontrol("Style", "text", "Position", [485, 313, 40, 25], "String", "$\psi$", "BackgroundColor", [1, 1, 1], "fontsize", 17)
+method6CheckBox = uicontrol("Style", "checkbox", "Position", [510, 313, 20, 19], "BackgroundColor", [0, 0.7, 1], "Value", 0)
 
-method7Label = uicontrol("Style", "text", "Position", [460, 325, 195, 25], "String", "7) Слаб. ф - ка", "BackgroundColor", [1, 1, 1])
-method7CheckBox = uicontrol("Style", "checkbox", "Position", [554, 330, 20, 19], "BackgroundColor", [1, 0.5, 0], "Value", 0)
+method7Label = uicontrol("Style", "text", "Position", [550, 370, 220, 25], "String", "7) The weak formulation", "BackgroundColor", [1, 1, 1])
+method7CheckBox = uicontrol("Style", "checkbox", "Position", [770, 373, 20, 19], "BackgroundColor", [1, 0.5, 0], "Value", 0)
 set(method7CheckBox, "Enable", "off");
 
-method8Label = uicontrol("Style", "text", "Position", [460, 305, 195, 25], "String", "8) Метод кон. эл.", "BackgroundColor", [1, 1, 1])
-method8CheckBox = uicontrol("Style", "checkbox", "Position", [554, 310, 20, 19], "BackgroundColor", [0.0, 0.7, 0.7], "Value", 0)
+method8Label = uicontrol("Style", "text", "Position", [550, 340, 220, 25], "String", "8) The finite element method", "BackgroundColor", [1, 1, 1])
+method8CheckBox = uicontrol("Style", "checkbox", "Position", [770, 343, 20, 19], "BackgroundColor", [0.0, 0.7, 0.7], "Value", 0)
 
-Button = uicontrol("Style", "pushbutton", "Position", [250, 250, 70, 25], "String", "Run", "Callback", "run");
+Button = uicontrol("Style", "pushbutton", "Position", [360, 280, 70, 25], "String", "Run", "Callback", "run");
 
 q = 101;
 points = 0:(1/(q - 1)):1;
