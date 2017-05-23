@@ -9,7 +9,6 @@ Methods:
 6) The Galerkin Method without the condition at the end
 7) The weak formulation
 8) The finite element method
-
 ======
 ![sse1](https://cloud.githubusercontent.com/assets/7002896/26368517/eec647aa-4002-11e7-9ae3-554b9bb86511.png)
 ======
