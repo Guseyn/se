@@ -1,5 +1,5 @@
 # se
-Realization of some numerical - analytical methods on scilab for Dirichlet and Neumann probplems for the Second Order Linear Differential Equation".
+Realization of some numerical - analytical methods on scilab for Dirichlet and Neumann probplems for the Second Order Linear Differential Equation.
 Methods:
 1) The pointwise collocation method
 2) The collocation method by region
