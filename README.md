@@ -10,11 +10,12 @@ Methods:
 7) The weak formulation
 8) The finite element method
 
+![sse1](https://cloud.githubusercontent.com/assets/7002896/26368517/eec647aa-4002-11e7-9ae3-554b9bb86511.png)
 
-![se1](https://cloud.githubusercontent.com/assets/7002896/26339046/10fb9f22-3f96-11e7-931f-308c7273e8f4.png)
+![sse2](https://cloud.githubusercontent.com/assets/7002896/26368516/eec61be0-4002-11e7-944d-c606eff7cab4.png)
 
-![se2](https://cloud.githubusercontent.com/assets/7002896/26339045/10fa09fa-3f96-11e7-8ef3-5e1017f0b7a9.png)
+![sse3](https://cloud.githubusercontent.com/assets/7002896/26368518/eec6afa6-4002-11e7-97cf-0f266f9af4a4.png)
 
-![se4](https://cloud.githubusercontent.com/assets/7002896/26339047/10fbdf82-3f96-11e7-9c5f-40744bcbf1ff.png)
+![sse4](https://cloud.githubusercontent.com/assets/7002896/26368520/eecbde7c-4002-11e7-964d-06de9d68aa09.png)
 
-![se3](https://cloud.githubusercontent.com/assets/7002896/26339048/10fc8306-3f96-11e7-906a-6fd725978746.png)
+![sse5](https://cloud.githubusercontent.com/assets/7002896/26368519/eeca9030-4002-11e7-9156-7ecf41065f5a.png)
