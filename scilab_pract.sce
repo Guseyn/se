@@ -21,11 +21,11 @@ NeumannLabel1 = uicontrol("Style", "text", "Position", [20, 460, 275, 25], "Stri
 NeumannAppLabel2 = uicontrol("Style", "text", "Position", [20, 440, 275, 25], "String", "$\varphi(0) = 0,\ (d\varphi/dx)_{x = 1} = 1$", "BackgroundColor", [1, 1, 1], "fontsize", 15)
 NeumannRadioButton = uicontrol("Style", "radiobutton", "Position", [250, 450, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "NeumannRadioButtonCallback")
 
-DirichletDiffLabel = uicontrol("Style", "text", "Position", [300, 510, 280, 25], "String", "Error for the solution for", "BackgroundColor", [1, 1, 1]);
+DirichletDiffLabel = uicontrol("Style", "text", "Position", [300, 510, 280, 25], "String", "Error for the solution of", "BackgroundColor", [1, 1, 1]);
 DirichletDiffLabel = uicontrol("Style", "text", "Position", [300, 490, 280, 25], "String", "Dirichlet problem", "BackgroundColor", [1, 1, 1]);
 DirichletDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [500, 500, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0, "Callback", "DDRadioButtonCallback")
 
-NeumannDiffLabel1 = uicontrol("Style", "text", "Position", [300, 460, 275, 25], "String", "Error for the solution for", "BackgroundColor", [1, 1, 1]);
+NeumannDiffLabel1 = uicontrol("Style", "text", "Position", [300, 460, 275, 25], "String", "Error for the solution of", "BackgroundColor", [1, 1, 1]);
 NeumannDiffLabel2 = uicontrol("Style", "text", "Position", [300, 440, 275, 25], "String", "Neumann problem ", "BackgroundColor", [1, 1, 1]);
 NeumannDiffRadioButton = uicontrol("Style", "radiobutton", "Position", [500, 450, 20, 25], "BackgroundColor", [1, 1, 1], "Value", 0,  "Callback", "NDRadioButtonCallback")
 
@@ -848,4 +848,5 @@ function run()
         
 	end;
 endfunction;
+
 
