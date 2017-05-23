@@ -15,6 +15,6 @@ Methods:
 
 ![se2](https://cloud.githubusercontent.com/assets/7002896/26339045/10fa09fa-3f96-11e7-8ef3-5e1017f0b7a9.png)
 
-![se3](https://cloud.githubusercontent.com/assets/7002896/26339048/10fc8306-3f96-11e7-906a-6fd725978746.png)
-
 ![se4](https://cloud.githubusercontent.com/assets/7002896/26339047/10fbdf82-3f96-11e7-9c5f-40744bcbf1ff.png)
+
+![se3](https://cloud.githubusercontent.com/assets/7002896/26339048/10fc8306-3f96-11e7-906a-6fd725978746.png)
