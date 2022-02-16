@@ -152,7 +152,7 @@ endfunction;
 
 function Nk = getNkOfFiniteElements(kValue, xValue, MValue)
      MPoints = 0:(1/MValue):1;Nk = 0;
-     if kValue = 1 then
+     if kValue == 1 then
          kValue = 2;
      end
      if (xValue <= MPoints(kValue - 1)) then
